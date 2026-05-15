@@ -1,3 +1,4 @@
+
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
@@ -35,7 +36,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
   }
 
   // COD PAYMENT
-  Future<void> payNow() async {
+  Future<void> codMethod() async {
     final user = FirebaseAuth.instance.currentUser;
     if (user == null) return;
 
@@ -54,7 +55,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
 
       ScaffoldMessenger.of(
         context,
-      ).showSnackBar(const SnackBar(content: Text("Order Placed (COD) 🎉")));
+      ).showSnackBar(const SnackBar(content: Text("Order Placed via Cash on Delivery 🎉")));
 
       // Stay on screen + reset state
       setState(() {
@@ -185,7 +186,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     ? null
                     : () {
                         if (selectedMethod == "COD") {
-                          payNow();
+                          codMethod();
                         } else {
                           openPayment();
                         }
