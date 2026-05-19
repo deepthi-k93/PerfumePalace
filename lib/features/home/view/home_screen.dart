@@ -8,6 +8,7 @@ import 'package:project_entri/features/cart/firebase_cart_service.dart';
 import 'package:project_entri/features/product/product_detail_screen.dart';
 import 'package:project_entri/features/product/product_list_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:project_entri/features/user/profile_screen.dart';
 import 'package:project_entri/features/wishlist/wishlist.dart';
 import 'package:project_entri/features/wishlist/wishlist_service.dart';
 import 'package:project_entri/reuse_functions.dart';
@@ -79,10 +80,10 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
               leading: const Icon(Icons.person),
               title: const Text("Profile"),
               onTap: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (_) => ProfileScreen()),
-                // );
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => ProfileScreen()),
+                );
               },
             ),
 

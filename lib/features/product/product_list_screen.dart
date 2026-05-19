@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:project_entri/all_items.dart';
 import 'package:project_entri/features/cart/cart_screen.dart';
 import 'package:project_entri/features/product/product_detail_screen.dart';
 import 'package:project_entri/features/wishlist/wishlist.dart';
@@ -39,18 +40,18 @@ class ProductListScreen extends StatelessWidget {
       "images/products/giftset10.webp",
     ],
     "Deodorants": [
-      "images/products/deodorant1.webp",
-      "images/products/deodorant2.webp",
-      "images/products/deodorant3.webp",
-      "images/products/deodorant4.webp",
-      "images/products/deodorant5.webp",
-      "images/products/deodorant6.webp",
-      "images/products/deodorant7.webp",
-      "images/products/deodorant8.webp",
-      "images/products/deodorant9.webp",
-      "images/products/deodorant10.webp",
-      "images/products/deodorant11.webp",
-      "images/products/deodorant12.webp",
+      "images/products/deo1.webp",
+      "images/products/deo2.webp",
+      "images/products/deo3.webp",
+      "images/products/deo4.webp",
+      "images/products/deo5.webp",
+      "images/products/deo6.webp",
+      "images/products/deo7.webp",
+      "images/products/deo8.webp",
+      "images/products/deo9.webp",
+      "images/products/deo10.webp",
+      "images/products/deo11.webp",
+      "images/products/deo12.webp",
     ],
     "FragranceMists": [
       "images/products/mist1.webp",
@@ -71,10 +72,6 @@ class ProductListScreen extends StatelessWidget {
       "images/products/lotion4.webp",
       "images/products/lotion5.webp",
       "images/products/lotion6.webp",
-      // "assets/images/clutches7.webp",
-      // "assets/images/clutches8.webp",
-      // "assets/images/clutches9.webp",
-      // "assets/images/clutches10.webp",
     ],
     "DeodorantStick": [
       "images/products/stick1.webp",
@@ -111,9 +108,12 @@ class ProductListScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final products = allProducts
+    final products = AllItems().products
         .where((p) => p["category"] == category)
         .toList();
+    // final products = allProducts
+    //     .where((p) => p["category"] == category)
+    //     .toList();
 
     return Scaffold(
       appBar: AppBar(
@@ -136,9 +136,7 @@ class ProductListScreen extends StatelessWidget {
 
               Navigator.push(
                 context,
-                MaterialPageRoute(
-                  builder: (_) => const WishlistScreen(),
-                ),
+                MaterialPageRoute(builder: (_) => const WishlistScreen()),
               );
             },
             icon: const Icon(Icons.favorite_border),
@@ -196,23 +194,22 @@ class ProductListScreen extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Expanded(
-                                child: Padding(
-                                  padding: const EdgeInsets.all(4),
-                                  child: Image.asset(
-                                    product["image"],
-                                    fit: BoxFit.cover,
-                                    width: double.infinity,
-                                  ),
+                              SizedBox(
+                                width: double.infinity,
+                                child: Image.asset(
+                                  product["image"],
+                                  fit: BoxFit.cover,
                                 ),
                               ),
 
                               /// CONTENT
                               Padding(
                                 padding: const EdgeInsets.symmetric(
-                                  horizontal: 2,
+                                  horizontal: 5,
                                 ),
                                 child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+
                                   children: [
                                     Text(
                                       product["name"],
@@ -220,20 +217,38 @@ class ProductListScreen extends StatelessWidget {
                                       overflow: TextOverflow.ellipsis,
                                     ),
 
-                                    const SizedBox(height: 4),
+                                    const SizedBox(height: 2),
 
-                                    Text(
-                                      "₹.${product["price"]}",
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        color: MyColours.bgColor,
-                                      ),
+                                    Row(
+                                      children: [
+                                        Text(
+                                          "₹${product["price"].toStringAsFixed(0)}",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            color: MyColours.bgColor,
+                                            decoration:
+                                                TextDecoration.lineThrough,
+                                            decorationColor: Colors.red,
+                                            decorationThickness: 2.0,
+                                          ),
+                                        ),
+
+                                        const SizedBox(width: 10),
+
+                                        Text(
+                                          "₹${product["offer_price"].toStringAsFixed(0)}",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            color: MyColours.bgColor,
+                                          ),
+                                        ),
+                                      ],
                                     ),
 
                                     // const SizedBox(height: 6),
                                     SizedBox(
                                       width: double.infinity,
-                                      height: 10,
+                                      height: 17,
                                       child: ElevatedButton(
                                         style: ElevatedButton.styleFrom(
                                           backgroundColor: MyColours.bgColor,

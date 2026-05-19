@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MyColours {
-  static Color bgColor = Color.fromARGB(255, 116, 116, 116);
+  static Color bgColor = Color.fromARGB(255, 111, 65, 65);
 
   static Color iconsColor = Color.fromRGBO(0, 137, 204, 10);
 

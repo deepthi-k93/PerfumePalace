@@ -110,7 +110,6 @@ class ProductDetailScreen extends StatelessWidget {
                               ),
                             ),
                             const SizedBox(width: 10),
-                            // PRICE (fixed display)
                             Text(
                               "₹${offerPrice.toStringAsFixed(0)}",
                               style: TextStyle(
