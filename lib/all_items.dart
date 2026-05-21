@@ -140,88 +140,78 @@ class AllItems {
     },
     {
       "id": "13",
-      "name": "Gift Set Of Rasasi Hawas Ice Eau de Parfum 100ml For Men",
-      "price": 6500.0,
-      "offer_price": 3999.0,
+      "name":
+          "Gift Set Of Arabiyat Oud Al Layl Midnight Edition (100ML EDP + 200ML Deo )for Men & Women",
+      "price": 0.0,
+      "offer_price": 1599.0,
       "image": "images/products/giftset3.webp",
       "category": "GiftSets",
       "description":
-          "Experience the ultimate chill with Rasasi Hawas Ice—a frosty fragrance that transforms your everyday moments into something extraordinary. This 100ml powerhouse delivers crisp, invigorating notes that awaken your senses and keep you feeling fresh all day long. Perfect for the modern man who refuses to play it safe, this gift set arrives beautifully packaged and ready to impress. Whether you're treating yourself or surprising someone special, Hawas Ice is your ticket to smelling absolutely legendary. Embrace the cool factor and let this iconic scent become your signature move.\n\nFragrance Notes -\n\nTop Notes - Bergamot, Lemon, and mint\nHeart Notes - Orange Blossoms, Cardamom, Plum & Blackcurrant\nBase Notes - Patchouli, Sandalwood, Amber & Tonka Beans.\n\nThis Set Includes -\n\n100ml EDP\n60ML Shower Gel\n10ml Travel Spray",
+          "Step into the shadows with the Arabiyat Oud Al Layl Midnight Edition gift set. Whether you’re feeling mysterious or just plain magnetic, this dynamic duo—a 100ml EDP and 200ml deodorant—has you covered. It’s woody, bold, and perfect for anyone who wants to turn heads long after the sun goes down. Ready to claim the night?",
     },
     {
       "id": "14",
       "name":
-          "Gift Set Of Armaf Club De Nuit Pink Eau De Parfum 105ml For Women",
-      "price": 5000.0,
-      "offer_price": 3145.0,
+          "Gift Set Of Lattafa Artisan Ethnique Eau De Parfum 100ml For Man & Woman",
+      "price": 6200.0,
+      "offer_price": 4200.0,
       "image": "images/products/giftset4.webp",
       "category": "GiftSets",
       "description":
-          "Unleash your inner playfulness with this gift set of Armaf Club De Nuit Pink Eau De Parfum. Featuring a sensual 105ml EDT and a refreshing 200ml deodorant, this set is perfect for the playful woman in your life. Let her embrace her quirky side with this unique and delightful gift set.\n\nFragrance Notes -\nTop Notes - Orange, Grapefruit, Bergamot and Peach;\nMiddle Notes - Rose, Geranium, Jasmine and Litchi;\nBase Notes - Patchouli, Vanilla, Musk and Vetiver.\n\nThis Gift Set Contains - \n\nArmaf Club De Nuit Women 105ml EDT \nArmaf Club De Nuit Women 200ml Deodorant ",
+          "Discover the refined allure of the Gift Set of Lattafa Artisan Ethnique Eau De Parfum 100ml, designed for both men and women. This sophisticated fragrance artfully combines traditional and contemporary notes, creating a captivating scent that embodies cultural elegance. An ideal gift for those who appreciate timeless, distinctive aromas.",
     },
     {
       "id": "15",
-      "name": "Gift Set Of Rasasi Hawas Ice Eau de Parfum 100ml For Men",
-      "price": 6500.0,
-      "offer_price": 3999.0,
-      "image": "images/products/giftset5.webp",
-      "category": "GiftSets",
-      "description":
-          "Experience the ultimate chill with Rasasi Hawas Ice—a frosty fragrance that transforms your everyday moments into something extraordinary. This 100ml powerhouse delivers crisp, invigorating notes that awaken your senses and keep you feeling fresh all day long. Perfect for the modern man who refuses to play it safe, this gift set arrives beautifully packaged and ready to impress. Whether you're treating yourself or surprising someone special, Hawas Ice is your ticket to smelling absolutely legendary. Embrace the cool factor and let this iconic scent become your signature move.\n\nFragrance Notes -\n\nTop Notes - Bergamot, Lemon, and mint\nHeart Notes - Orange Blossoms, Cardamom, Plum & Blackcurrant\nBase Notes - Patchouli, Sandalwood, Amber & Tonka Beans.\n\nThis Set Includes -\n\n100ml EDP\n60ML Shower Gel\n10ml Travel Spray",
-    },
-    {
-      "id": "16",
-      "name":
-          "Gift Set Of Armaf Club De Nuit Pink Eau De Parfum 105ml For Women",
-      "price": 5000.0,
-      "offer_price": 3145.0,
+      "name": "Discovery Set Of Armaf Club De Nuit Series 5mlx10 For Man & Woman",
+      "price": 10000.0,
+      "offer_price": 7499.0,
       "image": "images/products/giftset6.webp",
       "category": "GiftSets",
       "description":
-          "Unleash your inner playfulness with this gift set of Armaf Club De Nuit Pink Eau De Parfum. Featuring a sensual 105ml EDT and a refreshing 200ml deodorant, this set is perfect for the playful woman in your life. Let her embrace her quirky side with this unique and delightful gift set.\n\nFragrance Notes -\nTop Notes - Orange, Grapefruit, Bergamot and Peach;\nMiddle Notes - Rose, Geranium, Jasmine and Litchi;\nBase Notes - Patchouli, Vanilla, Musk and Vetiver.\n\nThis Gift Set Contains - \n\nArmaf Club De Nuit Women 105ml EDT \nArmaf Club De Nuit Women 200ml Deodorant ",
-    },
+          "Discover the versatility of Armaf's most celebrated fragrances with this premium 10-piece collection. Each 5ml bottle delivers the full character of iconic scents including Club De Nuit Pink, Imperiale, Intense Woman, Intense Man, Oud, Iconic, Milestone, Untold, Sillage, and Urban Man Elixir. Perfect for exploring different moods and occasions, this set lets you experience luxury fragrances without committing to full sizes. "   },
+    {
+      "id": "16",
+      "name":"Armaf Emotions Collection Eau De Parfum 7pc Set For Man & Woman",
+      "price": 5000.0,
+      "offer_price": 4000.0,
+      "image": "images/products/giftset5.webp",
+      "category": "GiftSets",
+      "description":"Experience the Armaf Emotions Collection Eau De Parfum 7-piece set for men and women, thoughtfully curated to suit every mood and moment. This elegant set includes a 100ml Heart fragrance and six 15ml scents—Confident, Dynamic, Fresh, Hypnotic, Relax, and Romantic—each crafted to evoke distinct emotions."    },
     {
       "id": "17",
-      "name": "Gift Set Of Rasasi Hawas Ice Eau de Parfum 100ml For Men",
-      "price": 6500.0,
-      "offer_price": 3999.0,
+      "name": "Gift Set Of Nautica Midnight Voyage Eau De Toilette (50ml + 7ml) For Men",
+      "price": 3400.0,
+      "offer_price": 2380.0,
       "image": "images/products/giftset7.webp",
       "category": "GiftSets",
       "description":
-          "Experience the ultimate chill with Rasasi Hawas Ice—a frosty fragrance that transforms your everyday moments into something extraordinary. This 100ml powerhouse delivers crisp, invigorating notes that awaken your senses and keep you feeling fresh all day long. Perfect for the modern man who refuses to play it safe, this gift set arrives beautifully packaged and ready to impress. Whether you're treating yourself or surprising someone special, Hawas Ice is your ticket to smelling absolutely legendary. Embrace the cool factor and let this iconic scent become your signature move.\n\nFragrance Notes -\n\nTop Notes - Bergamot, Lemon, and mint\nHeart Notes - Orange Blossoms, Cardamom, Plum & Blackcurrant\nBase Notes - Patchouli, Sandalwood, Amber & Tonka Beans.\n\nThis Set Includes -\n\n100ml EDP\n60ML Shower Gel\n10ml Travel Spray",
+          "Indulge in the luxurious scent of Nautica Midnight Voyage with this elegant gift set. Featuring a 50ml bottle of the sophisticated Eau De Toilette, as well as a travel-friendly 7ml bottle, this set is perfect for the discerning gentleman. Treat yourself or a loved one to the exclusive and refined fragrance of Nautica Midnight Voyage.",
     },
     {
       "id": "18",
-      "name":
-          "Gift Set Of Armaf Club De Nuit Pink Eau De Parfum 105ml For Women",
-      "price": 5000.0,
-      "offer_price": 3145.0,
+      "name":"IBRAQ Mini Summer Collection 20mlx6 For Man",  
+      "price": 8000.0,
+      "offer_price": 6499.0,
       "image": "images/products/giftset8.webp",
       "category": "GiftSets",
-      "description":
-          "Unleash your inner playfulness with this gift set of Armaf Club De Nuit Pink Eau De Parfum. Featuring a sensual 105ml EDT and a refreshing 200ml deodorant, this set is perfect for the playful woman in your life. Let her embrace her quirky side with this unique and delightful gift set.\n\nFragrance Notes -\nTop Notes - Orange, Grapefruit, Bergamot and Peach;\nMiddle Notes - Rose, Geranium, Jasmine and Litchi;\nBase Notes - Patchouli, Vanilla, Musk and Vetiver.\n\nThis Gift Set Contains - \n\nArmaf Club De Nuit Women 105ml EDT \nArmaf Club De Nuit Women 200ml Deodorant ",
-    },
+      "description":"Why settle for one summer vibe when you can have the whole coastline? The IBRAQ Mini Summer Collection features six 20ml deluxe travel flacons designed for the man who refuses to stay in one place. From the salty energy of Sea Breeze to the bold, leathery warmth of Riviera Sunset, this set is your ultimate holiday rotation. Pack them all and be the main character of every beach club from Dubai to Saint-Tropez."    },
     {
       "id": "19",
-      "name": "Gift Set Of Rasasi Hawas Ice Eau de Parfum 100ml For Men",
-      "price": 6500.0,
-      "offer_price": 3999.0,
+      "name": "Gift Set Of Arabiyat Elham (100ML EDP + 200ML Deo ) for Men & Women",
+      "price": 0.0,
+      "offer_price": 1599.0,
       "image": "images/products/giftset9.webp",
       "category": "GiftSets",
-      "description":
-          "Experience the ultimate chill with Rasasi Hawas Ice—a frosty fragrance that transforms your everyday moments into something extraordinary. This 100ml powerhouse delivers crisp, invigorating notes that awaken your senses and keep you feeling fresh all day long. Perfect for the modern man who refuses to play it safe, this gift set arrives beautifully packaged and ready to impress. Whether you're treating yourself or surprising someone special, Hawas Ice is your ticket to smelling absolutely legendary. Embrace the cool factor and let this iconic scent become your signature move.\n\nFragrance Notes -\n\nTop Notes - Bergamot, Lemon, and mint\nHeart Notes - Orange Blossoms, Cardamom, Plum & Blackcurrant\nBase Notes - Patchouli, Sandalwood, Amber & Tonka Beans.\n\nThis Set Includes -\n\n100ml EDP\n60ML Shower Gel\n10ml Travel Spray",
+      "description":"Discover the perfect gift with Arabiyat Elham, a luxurious fragrance collection designed for both men and women. This elegant set includes a 100ML Eau de Parfum and a 200ML Deodorant, offering a complete aromatic experience. The rich, sophisticated scent of Arabiyat Elham captures the essence of timeless elegance with warm, oriental notes that linger beautifully throughout the day. "
     },
     {
       "id": "20",
-      "name":
-          "Gift Set Of Armaf Club De Nuit Pink Eau De Parfum 105ml For Women",
-      "price": 5000.0,
-      "offer_price": 3145.0,
+      "name":"Discovery Set Of Armaf Odyssey Eau De Parfum 12x 10ml For Man & Woman"  ,
+      "price": 5850.0,
+      "offer_price": 3999.0,
       "image": "images/products/giftset10.webp",
       "category": "GiftSets",
-      "description":
-          "Unleash your inner playfulness with this gift set of Armaf Club De Nuit Pink Eau De Parfum. Featuring a sensual 105ml EDT and a refreshing 200ml deodorant, this set is perfect for the playful woman in your life. Let her embrace her quirky side with this unique and delightful gift set.\n\nFragrance Notes -\nTop Notes - Orange, Grapefruit, Bergamot and Peach;\nMiddle Notes - Rose, Geranium, Jasmine and Litchi;\nBase Notes - Patchouli, Vanilla, Musk and Vetiver.\n\nThis Gift Set Contains - \n\nArmaf Club De Nuit Women 105ml EDT \nArmaf Club De Nuit Women 200ml Deodorant ",
-    },
+      "description":"Unleash your inner scent-shifter with the Armaf Odyssey Discovery Set! Featuring 12 sleek 10ml vials, this collection is a total playground for your pulse points. Whether you’re feeling moody and mysterious or bright and bold, there’s a vibe for every mood and gender. Spritz, layer, and find your new signature—it’s a full-blown fragrance festival in one box!"    },
     //DEODORANTS
     {
       "id": "21",
@@ -306,7 +296,7 @@ class AllItems {
     {
       "id": "29",
       "name": "Lattafa Musamam White Perfumed Spray 200ml",
-      "price": 325.0,
+      "price": 0.0,
       "offer_price": 325.0,
       "image": "images/products/deo9.webp",
       "category": "Deodorants",
@@ -326,7 +316,7 @@ class AllItems {
     {
       "id": "31",
       "name": "Rasasi Blue Lady Deodorant Body Spray For Women 200 ML",
-      "price": 349.0,
+      "price": 0.0,
       "offer_price": 349.0,
       "image": "images/products/deo11.webp",
       "category": "Deodorants",
@@ -353,7 +343,8 @@ class AllItems {
       "image": "images/products/mist1.webp",
       "category": "FragranceMists",
       "description":
-          "Experience long-lasting freshness with Rasasi Chastity's Fragrance Body Mist for men and women. This powerhouse product contains 250ml of high-grade fragrance that reduces body odor and provides you with 24 hour freshness. Enjoy a balanced blend of relaxed notes for a delightful scent that will make you feel refreshed and energized."   },
+          "Experience long-lasting freshness with Rasasi Chastity's Fragrance Body Mist for men and women. This powerhouse product contains 250ml of high-grade fragrance that reduces body odor and provides you with 24 hour freshness. Enjoy a balanced blend of relaxed notes for a delightful scent that will make you feel refreshed and energized.",
+    },
     {
       "id": "34",
       "name": "Rasasi Aroma Intense Fragrance Body Mist 250ml For Women",
@@ -361,7 +352,9 @@ class AllItems {
       "offer_price": 799.0,
       "image": "images/products/mist2.webp",
       "category": "FragranceMists",
-      "description":"Rasasi Aroma Intense Fragrance Body Mist for Women offers up to 12-hour protection with its floriental floral notes and musky woody base notes. Enjoy a blend of floral and oriental notes that are sure to keep you feeling confident all day long."    },
+      "description":
+          "Rasasi Aroma Intense Fragrance Body Mist for Women offers up to 12-hour protection with its floriental floral notes and musky woody base notes. Enjoy a blend of floral and oriental notes that are sure to keep you feeling confident all day long.",
+    },
 
     {
       "id": "35",
@@ -370,7 +363,9 @@ class AllItems {
       "offer_price": 799.0,
       "image": "images/products/mist3.webp",
       "category": "FragranceMists",
-      "description":"Discover the exotic beauty of Rasasi's Blue Lady Fragrance Body Mist, specifically crafted for women. This luxurious 250ml mist is infused with an intriguing blend of oriental flower, cedarwood and patchouli notes. Enjoy the sensual aroma while feeling soft and refreshed."    },
+      "description":
+          "Discover the exotic beauty of Rasasi's Blue Lady Fragrance Body Mist, specifically crafted for women. This luxurious 250ml mist is infused with an intriguing blend of oriental flower, cedarwood and patchouli notes. Enjoy the sensual aroma while feeling soft and refreshed.",
+    },
 
     {
       "id": "36",
@@ -379,10 +374,13 @@ class AllItems {
       "offer_price": 749.0,
       "image": "images/products/mist4.webp",
       "category": "FragranceMists",
-      "description":"Adorn yourself with the sophisticated scent of Risasi Innocence Fragrance Body Mist. This 250ml bottle offers a perfect aromatic blend with top notes of spices and citrus, seamlessly combining with heart notes of musk and base notes of woody tones. Enjoy the scent for hours."    },
+      "description":
+          "Adorn yourself with the sophisticated scent of Risasi Innocence Fragrance Body Mist. This 250ml bottle offers a perfect aromatic blend with top notes of spices and citrus, seamlessly combining with heart notes of musk and base notes of woody tones. Enjoy the scent for hours.",
+    },
     {
       "id": "37",
-      "name": "Victoria's Secret Love Spell Romance Fragrance Mist 250ml For Women",
+      "name":
+          "Victoria's Secret Love Spell Romance Fragrance Mist 250ml For Women",
       "price": 2499.0,
       "offer_price": 1870.0,
       "image": "images/products/mist5.webp",
@@ -408,15 +406,20 @@ class AllItems {
       "offer_price": 799.0,
       "image": "images/products/mist7.webp",
       "category": "FragranceMists",
-      "description":"Experience the fine scent of luxury with the Rasasi Royale Fragrance Body Mist for Women. This 250ml body mist offers a subtle yet delightful scent that will last all day long. The perfect addition to your everyday routine, the Rasasi Royale Fragrance Body Mist for Women will bring you the elegance of royal living."    },
+      "description":
+          "Experience the fine scent of luxury with the Rasasi Royale Fragrance Body Mist for Women. This 250ml body mist offers a subtle yet delightful scent that will last all day long. The perfect addition to your everyday routine, the Rasasi Royale Fragrance Body Mist for Women will bring you the elegance of royal living.",
+    },
     {
       "id": "40",
-      "name": "Armaf Italiano Vivo Uomo Fragrance Body Spray Mist For Unisex 250 ml",
+      "name":
+          "Armaf Italiano Vivo Uomo Fragrance Body Spray Mist For Unisex 250 ml",
       "price": 1350.0,
       "offer_price": 850.0,
       "image": "images/products/mist8.webp",
       "category": "FragranceMists",
-      "description":"Armaf Italiano  UOMO fragrance body spray, 250ml. An expression of luxury that is innovative and couture."    },
+      "description":
+          "Armaf Italiano  UOMO fragrance body spray, 250ml. An expression of luxury that is innovative and couture.",
+    },
     {
       "id": "41",
       "name": "Rasasi Exotic Aroma Fragrance Body Mist 250ml For Women",
@@ -434,7 +437,9 @@ class AllItems {
       "offer_price": 1870.0,
       "image": "images/products/mist10.webp",
       "category": "FragranceMists",
-      "description":"Victoria's Secret Amber Romance Fragrance Mist for Women delivers an irresistible and sensual scent you'll love. Blended from top notes of black cherry and raspberry, mid notes of osmanthus and rose petal, and base notes of amber and vanilla, this 250ml mist captivates and flatters."    },
+      "description":
+          "Victoria's Secret Amber Romance Fragrance Mist for Women delivers an irresistible and sensual scent you'll love. Blended from top notes of black cherry and raspberry, mid notes of osmanthus and rose petal, and base notes of amber and vanilla, this 250ml mist captivates and flatters.",
+    },
 
     //Lotions
     {

@@ -98,17 +98,18 @@ class ProductDetailScreen extends StatelessWidget {
                         const SizedBox(height: 8),
                         Row(
                           children: [
-                            Text(
-                              '₹${price.toStringAsFixed(0)}',
-                              style: TextStyle(
-                                fontSize: 15,
-                                color: MyColours.bgColor,
-                                fontWeight: FontWeight.bold,
-                                decoration: TextDecoration.lineThrough,
-                                decorationColor: Colors.red,
-                                decorationThickness: 2.0,
+                            if (product["price"] != 0.0)
+                              Text(
+                                '₹${price.toStringAsFixed(0)}',
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  color: MyColours.bgColor,
+                                  fontWeight: FontWeight.bold,
+                                  decoration: TextDecoration.lineThrough,
+                                  decorationColor: Colors.red,
+                                  decorationThickness: 2.0,
+                                ),
                               ),
-                            ),
                             const SizedBox(width: 10),
                             Text(
                               "₹${offerPrice.toStringAsFixed(0)}",

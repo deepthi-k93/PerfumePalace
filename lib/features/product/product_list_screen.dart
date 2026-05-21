@@ -221,17 +221,18 @@ class ProductListScreen extends StatelessWidget {
 
                                     Row(
                                       children: [
-                                        Text(
-                                          "₹${product["price"].toStringAsFixed(0)}",
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            color: MyColours.bgColor,
-                                            decoration:
-                                                TextDecoration.lineThrough,
-                                            decorationColor: Colors.red,
-                                            decorationThickness: 2.0,
+                                        if (product["price"] != 0.0)
+                                          Text(
+                                            "₹${product["price"].toStringAsFixed(0)}",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              color: MyColours.bgColor,
+                                              decoration:
+                                                  TextDecoration.lineThrough,
+                                              decorationColor: Colors.red,
+                                              decorationThickness: 2.0,
+                                            ),
                                           ),
-                                        ),
 
                                         const SizedBox(width: 10),
 
