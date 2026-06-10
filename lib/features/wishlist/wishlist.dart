@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:project_entri/theme/colors.dart';
+import 'package:project_entri/widgets/custom_app_bar.dart';
+import 'package:project_entri/widgets/menu_drawer.dart';
 
 class WishlistScreen extends StatelessWidget {
   const WishlistScreen({super.key});
@@ -29,22 +31,24 @@ class WishlistScreen extends StatelessWidget {
     final user = FirebaseAuth.instance.currentUser;
 
     if (user == null) {
-      return const Scaffold(
-        body: Center(child: Text("Please login first")),
-      );
+      return const Scaffold(body: Center(child: Text("Please login first")));
     }
 
     return Scaffold(
-      appBar: AppBar(
-        title:  Text("Wishlist"),
-        backgroundColor: MyColours.bgColor,
-        foregroundColor: Colors.white,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(80),
+        child: CustomAppBar(),
       ),
+      drawer: MenuDrawer(),
 
+      // AppBar(
+      //   title:  Text("Wishlist"),
+      //   backgroundColor: MyColours.bgColor,
+      //   foregroundColor: Colors.white,
+      // ),
       body: StreamBuilder<QuerySnapshot>(
         stream: getWishlist(user.uid),
         builder: (context, snapshot) {
-
           //  Loading
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
@@ -73,14 +77,12 @@ class WishlistScreen extends StatelessWidget {
               final item = wishlist[index];
 
               return Card(
-                margin: const EdgeInsets.symmetric(
-                    horizontal: 10, vertical: 6),
+                margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                 elevation: 3,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: ListTile(
-
                   //  FIXED IMAGE
                   leading: ClipRRect(
                     borderRadius: BorderRadius.circular(8),
@@ -100,7 +102,7 @@ class WishlistScreen extends StatelessWidget {
 
                   subtitle: Text(
                     "₹${item["price"]}",
-                    style:  TextStyle(
+                    style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: MyColours.bgColor,
                     ),

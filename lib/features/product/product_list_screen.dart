@@ -1,119 +1,29 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart' hide Badge;
 import 'package:project_entri/all_items.dart';
 import 'package:project_entri/features/cart/cart_screen.dart';
+import 'package:project_entri/features/cart/empty_cart.dart';
+import 'package:project_entri/features/cart/firebase_cart_service.dart';
 import 'package:project_entri/features/product/product_detail_screen.dart';
 import 'package:project_entri/features/wishlist/wishlist.dart';
 import 'package:project_entri/features/wishlist/wishlist_service.dart';
 import 'package:project_entri/theme/colors.dart';
+import 'package:badges/badges.dart';
 
 class ProductListScreen extends StatelessWidget {
   final String category;
 
-  ProductListScreen({super.key, required this.category});
-
-  // IMAGE LIST
-  final Map<String, List<String>> productImages = {
-    "Perfumes": [
-      "images/products/perfume1.webp",
-      "images/products/perfume2.webp",
-      "images/products/perfume3.jpg",
-      "images/products/perfume4.webp",
-      "images/products/perfume5.webp",
-      "images/products/perfume6.webp",
-      "images/products/perfume7.webp",
-      "images/products/perfume8.webp",
-      "images/products/perfume9.webp",
-      "images/products/perfume10.webp",
-    ],
-    "GiftSets": [
-      "images/products/giftset1.webp",
-      "images/products/giftset2.webp",
-      "images/products/giftset3.webp",
-      "images/products/giftset4.webp",
-      "images/products/giftset5.webp",
-      "images/products/giftset6.webp",
-      "images/products/giftset7.webp",
-      "images/products/giftset8.webp",
-      "images/products/giftset9.webp",
-      "images/products/giftset10.webp",
-    ],
-    "Deodorants": [
-      "images/products/deo1.webp",
-      "images/products/deo2.webp",
-      "images/products/deo3.webp",
-      "images/products/deo4.webp",
-      "images/products/deo5.webp",
-      "images/products/deo6.webp",
-      "images/products/deo7.webp",
-      "images/products/deo8.webp",
-      "images/products/deo9.webp",
-      "images/products/deo10.webp",
-      "images/products/deo11.webp",
-      "images/products/deo12.webp",
-    ],
-    "FragranceMists": [
-      "images/products/mist1.webp",
-      "images/products/mist2.webp",
-      "images/products/mist3.webp",
-      "images/products/mist4.webp",
-      "images/products/mist5.webp",
-      "images/products/mist6.webp",
-      "images/products/mist7.webp",
-      "images/products/mist8.webp",
-      "images/products/mist9.webp",
-      "images/products/mist10.webp",
-    ],
-    "BodyLotions": [
-      "images/products/lotion1.webp",
-      "images/products/lotion2.webp",
-      "images/products/lotion3.webp",
-      "images/products/lotion4.webp",
-      "images/products/lotion5.webp",
-      "images/products/lotion6.webp",
-    ],
-    "DeodorantStick": [
-      "images/products/stick1.webp",
-      "images/products/stick2.webp",
-      "images/products/stick3.webp",
-      "images/products/stick4.webp",
-      "images/products/stick5.webp",
-      "images/products/stick6.webp",
-      "images/products/stick7.webp",
-      "images/products/stick8.webp",
-      "images/products/stick9.webp",
-      "images/products/stick10.webp",
-    ],
-  };
-
-  /// GENERATE PRODUCTS
-  List<Map<String, dynamic>> get allProducts {
-    List<Map<String, dynamic>> products = [];
-
-    productImages.forEach((categoryName, images) {
-      for (int i = 0; i < images.length; i++) {
-        products.add({
-          "id": "$categoryName-$i", //
-          "name": "$categoryName ${i + 1}",
-          "price": 800 + i * 50, //
-          "image": images[i],
-          "category": categoryName,
-        });
-      }
-    });
-
-    return products;
-  }
+  const ProductListScreen({super.key, required this.category});
 
   @override
   Widget build(BuildContext context) {
     final products = AllItems().products
         .where((p) => p["category"] == category)
         .toList();
-    // final products = allProducts
-    //     .where((p) => p["category"] == category)
-    //     .toList();
+    int cartProducts = 0;
+    final user = FirebaseAuth.instance.currentUser;
 
     return Scaffold(
       appBar: AppBar(
@@ -121,6 +31,7 @@ class ProductListScreen extends StatelessWidget {
         centerTitle: true,
         backgroundColor: MyColours.bgColor,
         foregroundColor: Colors.white,
+        actionsPadding: EdgeInsets.symmetric(horizontal: 16.0),
         actions: [
           //FAVORITES BUTTON
           IconButton(
@@ -143,7 +54,63 @@ class ProductListScreen extends StatelessWidget {
           ),
 
           // CART BUTTON
-          IconButton(
+          Badge(
+            position: BadgePosition.topEnd(top: 1, end: 1),
+            badgeAnimation: BadgeAnimation.slide(
+              animationDuration: Duration(milliseconds: 300),
+              toAnimate: true,
+            ),
+            badgeStyle: BadgeStyle(
+              badgeColor: MyColours.iconsColor,
+              padding: EdgeInsetsGeometry.all(5),
+            ),
+            badgeContent: StreamBuilder<int>(
+              stream: FirebaseCartService().getCartCount(user!.uid),
+              builder: (context, snapshot) {
+                if (snapshot.hasData) {
+                  cartProducts = snapshot.data!;
+                  return Text(
+                    cartProducts.toString(),
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  );
+                } else {
+                  return Text(
+                    "0",
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  );
+                }
+              },
+            ),
+            child: IconButton(
+              onPressed: () {
+                if (cartProducts > 0) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CartScreen()),
+                  );
+                } else {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => EmptyCart()),
+                  );
+                }
+              },
+              icon: Icon(
+                Icons.shopping_bag_outlined,
+                // color: MyColours.iconsColor,
+              ),
+            ),
+          ),
+
+          /*   IconButton(
             onPressed: () {
               Navigator.push(
                 context,
@@ -152,7 +119,7 @@ class ProductListScreen extends StatelessWidget {
             },
             icon: const Icon(Icons.shopping_cart_outlined),
           ),
-
+*/
           const SizedBox(width: 10),
         ],
       ),

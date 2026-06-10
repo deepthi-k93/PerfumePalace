@@ -2,12 +2,13 @@
 
 import 'package:project_entri/auth_service.dart';
 import 'package:project_entri/theme/colors.dart';
-import 'package:project_entri/widgets/custom_app_bar.dart';
+import 'package:project_entri/widgets/custom_app_bar_without_back.dart';
 import 'package:project_entri/widgets/custom_button.dart';
 import 'package:project_entri/features/home/view/home_screen.dart';
 import 'package:project_entri/features/user/register/view/register_screen.dart';
 import 'package:project_entri/reuse_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:project_entri/widgets/menu_drawer.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -67,7 +68,7 @@ class _LoginScreenState extends State<LoginScreen> {
         if (mounted) {
           Navigator.pushReplacement(
             context,
-            MaterialPageRoute(builder: (_) => HomeScreen(loggedUser: email.text.trim())),
+            MaterialPageRoute(builder: (_) => HomeScreen()),
           );
         }
       } else {
@@ -96,7 +97,9 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: "Login"),
+      appBar: CustomAppBarWithoutBack(title: "Login"),
+            drawer: MenuDrawer(),
+
       body: SafeArea(
         child: Form(
           key: _formKey,

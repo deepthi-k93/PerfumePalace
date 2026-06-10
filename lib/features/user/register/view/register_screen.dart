@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:project_entri/auth_service.dart';
-import 'package:project_entri/widgets/custom_app_bar.dart';
+import 'package:project_entri/widgets/custom_app_bar_without_back.dart';
 import 'package:project_entri/widgets/custom_button.dart';
 import 'package:project_entri/features/user/login/view/login_screen.dart';
+import 'package:project_entri/widgets/menu_drawer.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -14,7 +15,7 @@ class RegisterScreen extends StatefulWidget {
 
 class _RegisterScreenState extends State<RegisterScreen> {
   final _formKey = GlobalKey<FormState>();
-  
+
   // Controllers
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _phoneController = TextEditingController();
@@ -58,10 +59,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
       if (user != null) {
         // ✅ Success
         _showSnackBar('Account created successfully!', Colors.green);
-        
+
         // Navigate to Login after 1.5s
         await Future.delayed(const Duration(milliseconds: 1500));
-        
+
         if (mounted) {
           Navigator.pushReplacement(
             context,
@@ -121,8 +122,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
     if (value.length < 8) {
       return 'Password must be at least 8 characters';
     }
-    if (!RegExp(r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])')
-        .hasMatch(value)) {
+    if (!RegExp(
+      r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])',
+    ).hasMatch(value)) {
       return 'Must contain uppercase, lowercase, number & special character';
     }
     return null;
@@ -131,7 +133,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(title: 'Create Account'),
+      appBar: const CustomAppBarWithoutBack(title: 'Create Account'),
+      drawer: MenuDrawer(),
+
       body: SafeArea(
         child: Form(
           key: _formKey,
@@ -143,10 +147,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 // Image
                 ClipRRect(
                   borderRadius: BorderRadius.circular(16),
-                  child: Image.asset(
-                    "images/logo.webp",
-                    height: 220,
-                  ),
+                  child: Image.asset("images/logo.webp", height: 220),
                 ),
                 const SizedBox(height: 24),
 
@@ -162,10 +163,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 const SizedBox(height: 8),
                 Text(
                   'Fill in your details to get started',
-                  style: TextStyle(
-                    fontSize: 16,
-                    color: Colors.grey[600],
-                  ),
+                  style: TextStyle(fontSize: 16, color: Colors.grey[600]),
                 ),
                 const SizedBox(height: 32),
 
@@ -211,8 +209,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     if (value == null || value.isEmpty) {
                       return 'Email is required';
                     }
-                    if (!RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$')
-                        .hasMatch(value)) {
+                    if (!RegExp(
+                      r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$',
+                    ).hasMatch(value)) {
                       return 'Enter a valid email address';
                     }
                     return null;
@@ -286,9 +285,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     return InputDecoration(
       labelText: label,
       prefixIcon: Icon(icon),
-      border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(12),
-      ),
+      border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
       filled: true,
       fillColor: Colors.grey[50],
       contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),

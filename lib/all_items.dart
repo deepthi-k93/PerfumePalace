@@ -162,24 +162,29 @@ class AllItems {
     },
     {
       "id": "15",
-      "name": "Discovery Set Of Armaf Club De Nuit Series 5mlx10 For Man & Woman",
+      "name":
+          "Discovery Set Of Armaf Club De Nuit Series 5mlx10 For Man & Woman",
       "price": 10000.0,
       "offer_price": 7499.0,
       "image": "images/products/giftset6.webp",
       "category": "GiftSets",
       "description":
-          "Discover the versatility of Armaf's most celebrated fragrances with this premium 10-piece collection. Each 5ml bottle delivers the full character of iconic scents including Club De Nuit Pink, Imperiale, Intense Woman, Intense Man, Oud, Iconic, Milestone, Untold, Sillage, and Urban Man Elixir. Perfect for exploring different moods and occasions, this set lets you experience luxury fragrances without committing to full sizes. "   },
+          "Discover the versatility of Armaf's most celebrated fragrances with this premium 10-piece collection. Each 5ml bottle delivers the full character of iconic scents including Club De Nuit Pink, Imperiale, Intense Woman, Intense Man, Oud, Iconic, Milestone, Untold, Sillage, and Urban Man Elixir. Perfect for exploring different moods and occasions, this set lets you experience luxury fragrances without committing to full sizes. ",
+    },
     {
       "id": "16",
-      "name":"Armaf Emotions Collection Eau De Parfum 7pc Set For Man & Woman",
+      "name": "Armaf Emotions Collection Eau De Parfum 7pc Set For Man & Woman",
       "price": 5000.0,
       "offer_price": 4000.0,
       "image": "images/products/giftset5.webp",
       "category": "GiftSets",
-      "description":"Experience the Armaf Emotions Collection Eau De Parfum 7-piece set for men and women, thoughtfully curated to suit every mood and moment. This elegant set includes a 100ml Heart fragrance and six 15ml scents—Confident, Dynamic, Fresh, Hypnotic, Relax, and Romantic—each crafted to evoke distinct emotions."    },
+      "description":
+          "Experience the Armaf Emotions Collection Eau De Parfum 7-piece set for men and women, thoughtfully curated to suit every mood and moment. This elegant set includes a 100ml Heart fragrance and six 15ml scents—Confident, Dynamic, Fresh, Hypnotic, Relax, and Romantic—each crafted to evoke distinct emotions.",
+    },
     {
       "id": "17",
-      "name": "Gift Set Of Nautica Midnight Voyage Eau De Toilette (50ml + 7ml) For Men",
+      "name":
+          "Gift Set Of Nautica Midnight Voyage Eau De Toilette (50ml + 7ml) For Men",
       "price": 3400.0,
       "offer_price": 2380.0,
       "image": "images/products/giftset7.webp",
@@ -189,29 +194,36 @@ class AllItems {
     },
     {
       "id": "18",
-      "name":"IBRAQ Mini Summer Collection 20mlx6 For Man",  
+      "name": "IBRAQ Mini Summer Collection 20mlx6 For Man",
       "price": 8000.0,
       "offer_price": 6499.0,
       "image": "images/products/giftset8.webp",
       "category": "GiftSets",
-      "description":"Why settle for one summer vibe when you can have the whole coastline? The IBRAQ Mini Summer Collection features six 20ml deluxe travel flacons designed for the man who refuses to stay in one place. From the salty energy of Sea Breeze to the bold, leathery warmth of Riviera Sunset, this set is your ultimate holiday rotation. Pack them all and be the main character of every beach club from Dubai to Saint-Tropez."    },
+      "description":
+          "Why settle for one summer vibe when you can have the whole coastline? The IBRAQ Mini Summer Collection features six 20ml deluxe travel flacons designed for the man who refuses to stay in one place. From the salty energy of Sea Breeze to the bold, leathery warmth of Riviera Sunset, this set is your ultimate holiday rotation. Pack them all and be the main character of every beach club from Dubai to Saint-Tropez.",
+    },
     {
       "id": "19",
-      "name": "Gift Set Of Arabiyat Elham (100ML EDP + 200ML Deo ) for Men & Women",
+      "name":
+          "Gift Set Of Arabiyat Elham (100ML EDP + 200ML Deo ) for Men & Women",
       "price": 0.0,
       "offer_price": 1599.0,
       "image": "images/products/giftset9.webp",
       "category": "GiftSets",
-      "description":"Discover the perfect gift with Arabiyat Elham, a luxurious fragrance collection designed for both men and women. This elegant set includes a 100ML Eau de Parfum and a 200ML Deodorant, offering a complete aromatic experience. The rich, sophisticated scent of Arabiyat Elham captures the essence of timeless elegance with warm, oriental notes that linger beautifully throughout the day. "
+      "description":
+          "Discover the perfect gift with Arabiyat Elham, a luxurious fragrance collection designed for both men and women. This elegant set includes a 100ML Eau de Parfum and a 200ML Deodorant, offering a complete aromatic experience. The rich, sophisticated scent of Arabiyat Elham captures the essence of timeless elegance with warm, oriental notes that linger beautifully throughout the day. ",
     },
     {
       "id": "20",
-      "name":"Discovery Set Of Armaf Odyssey Eau De Parfum 12x 10ml For Man & Woman"  ,
+      "name":
+          "Discovery Set Of Armaf Odyssey Eau De Parfum 12x 10ml For Man & Woman",
       "price": 5850.0,
       "offer_price": 3999.0,
       "image": "images/products/giftset10.webp",
       "category": "GiftSets",
-      "description":"Unleash your inner scent-shifter with the Armaf Odyssey Discovery Set! Featuring 12 sleek 10ml vials, this collection is a total playground for your pulse points. Whether you’re feeling moody and mysterious or bright and bold, there’s a vibe for every mood and gender. Spritz, layer, and find your new signature—it’s a full-blown fragrance festival in one box!"    },
+      "description":
+          "Unleash your inner scent-shifter with the Armaf Odyssey Discovery Set! Featuring 12 sleek 10ml vials, this collection is a total playground for your pulse points. Whether you’re feeling moody and mysterious or bright and bold, there’s a vibe for every mood and gender. Spritz, layer, and find your new signature—it’s a full-blown fragrance festival in one box!",
+    },
     //DEODORANTS
     {
       "id": "21",
@@ -444,167 +456,167 @@ class AllItems {
     //Lotions
     {
       "id": "43",
-      "name": "Lattafa Khamrah Eau De Parfum 100ml For Men & Women",
-      "price": 5000.0,
-      "offer_price": 2949.0,
-      "image": "images/products/lotion1.jpg",
+      "name": "Hamidi Luxury Oud Rose Body Lotion 500ml For Men & Women",
+      "price": 1399.0,
+      "offer_price": 999.0,
+      "image": "images/products/lotion1.webp",
       "category": "BodyLotions",
       "description":
-          "Lattafa Khamrah is a luxurious 100ml eau de parfum for men and women. This sophisticated fragrance blends warm spices, florals, and woody notes into a complex, long-lasting composition. Versatile enough for any occasion, it's ideal for those who appreciate refined, distinctive scents.\nFragrance Notes -\n\nTop Notes: Cognac\nMiddle notes : Tonka Bean , Cinnamon & Oak\nBase notes : Vanilla , Praline & Sandalwood",
+          "Indulge in the luxurious scent of our Hamidi Oud Rose Body Lotion. Perfect for both men and women, this 500ml lotion will leave your skin feeling soft and smooth. Say goodbye to dry skin and hello to a delightful fragrance that will linger all day.",
     },
     {
       "id": "44",
-      "name": "Gift Set Of Rasasi Hawas Ice Eau de Parfum 100ml For Men",
-      "price": 6500.0,
-      "offer_price": 3999.0,
+      "name": "Hamidi Luxury Amber Oud Body Lotion 500ml For Men & Women",
+      "price": 1399.0,
+      "offer_price": 999.0,
       "image": "images/products/lotion2.webp",
       "category": "BodyLotions",
       "description":
-          "Experience the ultimate chill with Rasasi Hawas Ice—a frosty fragrance that transforms your everyday moments into something extraordinary. This 100ml powerhouse delivers crisp, invigorating notes that awaken your senses and keep you feeling fresh all day long. Perfect for the modern man who refuses to play it safe, this gift set arrives beautifully packaged and ready to impress. Whether you're treating yourself or surprising someone special, Hawas Ice is your ticket to smelling absolutely legendary. Embrace the cool factor and let this iconic scent become your signature move.\n\nFragrance Notes -\n\nTop Notes - Bergamot, Lemon, and mint\nHeart Notes - Orange Blossoms, Cardamom, Plum & Blackcurrant\nBase Notes - Patchouli, Sandalwood, Amber & Tonka Beans.\n\nThis Set Includes -\n\n100ml EDP\n60ML Shower Gel\n10ml Travel Spray",
+          "Indulge in the luxurious and seductive scent of Hamidi's Amber Oud Body Lotion. This 500ml lotion is perfect for both men and women, providing long-lasting hydration and a captivating aroma. Elevate your self-care routine with this unique and irresistible lotion.",
     },
     {
       "id": "45",
-      "name":
-          "Gift Set Of Armaf Club De Nuit Pink Eau De Parfum 105ml For Women",
-      "price": 5000.0,
-      "offer_price": 3145.0,
+      "name": "Hamidi Luxury Oud Body Lotion 500ml For Men & Women",
+      "price": 1399.0,
+      "offer_price": 999.0,
       "image": "images/products/lotion3.webp",
       "category": "BodyLotions",
       "description":
-          "Unleash your inner playfulness with this gift set of Armaf Club De Nuit Pink Eau De Parfum. Featuring a sensual 105ml EDT and a refreshing 200ml deodorant, this set is perfect for the playful woman in your life. Let her embrace her quirky side with this unique and delightful gift set.\n\nFragrance Notes -\nTop Notes - Orange, Grapefruit, Bergamot and Peach;\nMiddle Notes - Rose, Geranium, Jasmine and Litchi;\nBase Notes - Patchouli, Vanilla, Musk and Vetiver.\n\nThis Gift Set Contains - \n\nArmaf Club De Nuit Women 105ml EDT \nArmaf Club De Nuit Women 200ml Deodorant ",
+          "Indulge in the luxurious scent of Oud with Hamidi Luxury Oud Body Lotion! This 500ml lotion is perfect for both men and women, leaving your skin feeling moisturized and smelling amazing. Treat yourself to the ultimate pampering experience with Hamidi! ",
     },
     {
       "id": "46",
-      "name": "Calvin Klein One Deodorant 150ml For Men",
-      "price": 1700.0,
-      "offer_price": 1360.0,
+      "name": "Hamidi Luxury Shams Edition Body Lotion 500ml For Men & Women",
+      "price": 1399.0,
+      "offer_price": 999.0,
       "image": "images/products/lotion4.webp",
       "category": "BodyLotions",
       "description":
-          "Calvin Klein One Deodorant 150ml for Men offers a refined and long-lasting freshness that complements your lifestyle. Its subtle yet distinctive scent ensures all-day confidence while maintaining a clean, invigorating feeling. ",
+          "Indulge in luxury with Hamidi Luxury Shams Edition Body Lotion. Infused with nourishing ingredients, this 500ml lotion is perfect for both men and women. Keep your skin hydrated and smelling divine. Treat yourself to the ultimate experience. (It's a lotion fit for a king and queen!)",
     },
     {
       "id": "47",
-      "name": "Armaf Club De Nuit Pink Deodorant Body Spray For Women 200 ML",
-      "price": 349.0,
-      "offer_price": 299.0,
+      "name": "Hamidi Luxury Oud Musk Body Lotion 500ml For Men & Women",
+      "price": 1399.0,
+      "offer_price": 999.0,
       "image": "images/products/lotion5.webp",
       "category": "BodyLotions",
       "description":
-          "Experience all-day freshness with Armaf Club De Nuit Deodorant Body Spray. This 200 ML spray is specially designed for women, providing long-lasting protection against body odor. Its luxurious fragrance will leave you feeling confident and refreshed. A must-have for any woman's daily routine.",
+          "Indulge your skin and senses with Hamidi Luxury Oud Musk Body Lotion. This 500ml lotion is perfect for both men and women and features a blend of oud and musk for a luxurious and long-lasting scent. Treat yourself to a nourishing and indulgent experience with this body lotion.",
     },
     {
       "id": "48",
-      "name": "Rasasi Ice Perfume for men",
-      "price": 5500.0,
-      "offer_price": 3849.0,
+      "name": "Hamidi Luxury White Musk Body Lotion 500ml For Men & Women",
+      "price": 1399.0,
+      "offer_price": 999.0,
       "image": "images/products/lotion6.webp",
       "category": "BodyLotions",
       "description":
-          "Experience complete confidence with Rasasi Hawas Ice Eau de Parfum, a 100 ml scent tailor-made for men. Infused with energy, the scent provides strength and assurance, leaving you empowered and ready to take on the world.\nFragrance Notes -\n\nTop Notes - Bergamot, Lemon, and mint\nMiddle Notes - Orange Blossoms, Cardamom, Plum & Blackcurrant\nBase Notes - Patchouli, Sandalwood, Amber & Tonka Beans.",
+          "Experience the refined elegance of Hamidi Luxury White Musk Body Lotion, crafted for both men and women. This 500ml lotion deeply nourishes your skin while leaving a subtle, sophisticated musk fragrance that lingers throughout the day. Perfect for daily use, it enhances your skin’s softness and radiance, offering a luxurious touch to your skincare routine. Elevate your senses with this timeless blend of comfort and class.",
     },
     //fragrance sticks
     {
       "id": "49",
-      "name": "Lattafa Yara Eau De Parfum 100ml For Women",
-      "price": 4000.0,
-      "offer_price": 2149.0,
+      "name": "Calvin Klein CK One Deodorant Stick 75g For Him & Her",
+      "price": 2100.0,
+      "offer_price": 1649.0,
       "image": "images/products/stick1.webp",
       "category": "DeodorantStick",
       "description":
-          "Indulge in the enchanting scent of Lattafa Yara Eau De Parfum. This 100ml fragrance for women is a perfect blend of sophistication and allure. Let the captivating notes of this perfume transport you to a world of elegance and charm. Truly irresistible!\nFragrance Notes -\n\nTop Notes: Tangerine, Heliotrope, Orchid\nHeart Notes :Tropical Notes, Gourmand\nBase Notes : Vanila, Sandalwood, Musk",
+          "Achieve long-lasting freshness with Calvin Klein CK One Deodorant Stick. This 75g deodorant stick is designed for both him and her, offering 24-hour protection to keep you feeling confidently crisp all day. Its dermatologically-tested formula helps ensure skin comfort, and its expertly-crafted fragrance helps ensure your freshness is noticed for all the right reasons.",
     },
 
     {
       "id": "50",
-      "name": "Lattafa Khamrah Eau De Parfum 100ml For Men & Women",
-      "price": 5000.0,
-      "offer_price": 2949.0,
+      "name": "Calvin Klein Obsession Men Deodorant Stick - 75gm",
+      "price": 1999.0,
+      "offer_price": 1595.0,
       "image": "images/products/stick2.webp",
       "category": "DeodorantStick",
       "description":
-          "Lattafa Khamrah is a luxurious 100ml eau de parfum for men and women. This sophisticated fragrance blends warm spices, florals, and woody notes into a complex, long-lasting composition. Versatile enough for any occasion, it's ideal for those who appreciate refined, distinctive scents.\nFragrance Notes -\n\nTop Notes: Cognac\nMiddle notes : Tonka Bean , Cinnamon & Oak\nBase notes : Vanilla , Praline & Sandalwood",
+          "Calvin Klein Obsession For Men Deodorant Stick is a perfect addition to your grooming routine, leaving you feeling fresh and confident all day long. This deodorant stick is a great alternative to traditional spray-on deodorants, providing an easy and mess-free application. The scent is the same as the iconic Obsession For Men fragrance, featuring a blend of spicy and woody notes, including cinnamon, nutmeg, sandalwood, and amber. This deodorant stick is gentle on the skin and provides long-lasting protection against sweat and odor, making it an ideal choice for men who lead an active lifestyle",
     },
     {
       "id": "51",
-      "name": "Gift Set Of Rasasi Hawas Ice Eau de Parfum 100ml For Men",
-      "price": 6500.0,
-      "offer_price": 3999.0,
+      "name": "Calvin Klein CK Free Deodorant Stick 75g For Him",
+      "price": 2100.0,
+      "offer_price": 1695.0,
       "image": "images/products/stick3.webp",
       "category": "DeodorantStick",
       "description":
-          "Experience the ultimate chill with Rasasi Hawas Ice—a frosty fragrance that transforms your everyday moments into something extraordinary. This 100ml powerhouse delivers crisp, invigorating notes that awaken your senses and keep you feeling fresh all day long. Perfect for the modern man who refuses to play it safe, this gift set arrives beautifully packaged and ready to impress. Whether you're treating yourself or surprising someone special, Hawas Ice is your ticket to smelling absolutely legendary. Embrace the cool factor and let this iconic scent become your signature move.\n\nFragrance Notes -\n\nTop Notes - Bergamot, Lemon, and mint\nHeart Notes - Orange Blossoms, Cardamom, Plum & Blackcurrant\nBase Notes - Patchouli, Sandalwood, Amber & Tonka Beans.\n\nThis Set Includes -\n\n100ml EDP\n60ML Shower Gel\n10ml Travel Spray",
+          "Calvin Klein CK Free Deodorant Stick offers a calming and sophisticated scent that is suitable for men . The lightweight and long-lasting formula is designed to deliver up to 48 hours of odor protection, keeping you feeling refreshed and confident all day long.",
     },
     {
       "id": "52",
-      "name":
-          "Gift Set Of Armaf Club De Nuit Pink Eau De Parfum 105ml For Women",
-      "price": 5000.0,
-      "offer_price": 3145.0,
+      "name": "Hamidi Deluxe Collection Zahra Roll On 24ml For Men & Women",
+      "price": 999.0,
+      "offer_price": 599.0,
       "image": "images/products/stick4.webp",
       "category": "DeodorantStick",
       "description":
-          "Unleash your inner playfulness with this gift set of Armaf Club De Nuit Pink Eau De Parfum. Featuring a sensual 105ml EDT and a refreshing 200ml deodorant, this set is perfect for the playful woman in your life. Let her embrace her quirky side with this unique and delightful gift set.\n\nFragrance Notes -\nTop Notes - Orange, Grapefruit, Bergamot and Peach;\nMiddle Notes - Rose, Geranium, Jasmine and Litchi;\nBase Notes - Patchouli, Vanilla, Musk and Vetiver.\n\nThis Gift Set Contains - \n\nArmaf Club De Nuit Women 105ml EDT \nArmaf Club De Nuit Women 200ml Deodorant ",
+          "Get ready to delight your senses with Hamidi Deluxe Collection Zahra Roll On! This 24ml roll on is perfect for both men and women, with a heavenly scent that will leave you feeling refreshed and confident. Indulge in the luxury of Zahra Roll On and embrace a new level of self-care. (No gender bias here!)",
     },
     {
       "id": "53",
-      "name": "Calvin Klein One Deodorant 150ml For Men",
-      "price": 1700.0,
-      "offer_price": 1360.0,
+      "name": "Hamidi Deluxe Collection Ruqaiyah Roll On 24ml For Men & Women",
+      "price": 999.0,
+      "offer_price": 599.0,
       "image": "images/products/stick5.webp",
       "category": "DeodorantStick",
       "description":
-          "Calvin Klein One Deodorant 150ml for Men offers a refined and long-lasting freshness that complements your lifestyle. Its subtle yet distinctive scent ensures all-day confidence while maintaining a clean, invigorating feeling. ",
+          "Introducing the Hamidi Deluxe Collection Ruqaiyah Roll On 24ml for both men and women. Experience the long-lasting scent of this unique roll-on deodorant that keeps you smelling fresh all day. Stay confident and stylish with Hamidi Deluxe Collection.",
     },
     {
       "id": "54",
-      "name": "Armaf Club De Nuit Pink Deodorant Body Spray For Women 200 ML",
-      "price": 349.0,
-      "offer_price": 299.0,
+      "name":
+          "Hamidi Deluxe Collection Rooh Al Oud Roll On 24ml For Men & Women",
+      "price": 999.0,
+      "offer_price": 599.0,
       "image": "images/products/stick6.webp",
       "category": "DeodorantStick",
       "description":
-          "Experience all-day freshness with Armaf Club De Nuit Deodorant Body Spray. This 200 ML spray is specially designed for women, providing long-lasting protection against body odor. Its luxurious fragrance will leave you feeling confident and refreshed. A must-have for any woman's daily routine.",
+          "Experience the luxury and seduction of Hamidi Deluxe Collection Rooh Al Oud Roll On. Perfect for both men and women, this 24ml roll on combines the hypnotic fragrance of Rooh Al Oud with the convenience of a roll-on applicator. Embrace your wild side with every roll!",
     },
     {
       "id": "55",
-      "name": "Armaf Club De Nuit Pink Deodorant Body Spray For Women 200 ML",
-      "price": 349.0,
-      "offer_price": 299.0,
+      "name": "Rasasi Emotion Homme Deo Roll on Deodorant Roll on For Men 50ml",
+      "price": 549.0,
+      "offer_price": 399.0,
       "image": "images/products/stick7.webp",
       "category": "DeodorantStick",
       "description":
-          "Experience all-day freshness with Armaf Club De Nuit Deodorant Body Spray. This 200 ML spray is specially designed for women, providing long-lasting protection against body odor. Its luxurious fragrance will leave you feeling confident and refreshed. A must-have for any woman's daily routine.",
+          "Stay fresh and confident all day with Rasasi Emotion Homme Deo Roll on Deodorant for men. This 50ml roll on offers a long-lasting fragrance and protection against body odor. Keep the good vibes rolling with this quirky and effective deodorant. (Only for guys who like to make a statement!)",
     },
     {
       "id": "56",
-      "name": "Armaf Club De Nuit Pink Deodorant Body Spray For Women 200 ML",
-      "price": 349.0,
-      "offer_price": 299.0,
+      "name": "Rasasi Royale Deo Roll on Deodorant Roll on For Men 50ml",
+      "price": 549.0,
+      "offer_price": 399.0,
       "image": "images/products/stick8.webp",
       "category": "DeodorantStick",
       "description":
-          "Experience all-day freshness with Armaf Club De Nuit Deodorant Body Spray. This 200 ML spray is specially designed for women, providing long-lasting protection against body odor. Its luxurious fragrance will leave you feeling confident and refreshed. A must-have for any woman's daily routine.",
+          "Upgrade your daily routine with Rasasi Royale Deo Roll on Deodorant for men. This 50ml roll on is perfect for on-the-go freshness. Keep sweat and odor at bay while staying confident and smelling great. Try it now!",
     },
     {
       "id": "57",
-      "name": "Armaf Club De Nuit Pink Deodorant Body Spray For Women 200 ML",
-      "price": 349.0,
-      "offer_price": 299.0,
+      "name": "Polo Ralph Lauren Red Extreme Deodorant Stick 75g For Men",
+      "price": 3955.0,
+      "offer_price": 2899.0,
       "image": "images/products/stick9.webp",
       "category": "DeodorantStick",
       "description":
-          "Experience all-day freshness with Armaf Club De Nuit Deodorant Body Spray. This 200 ML spray is specially designed for women, providing long-lasting protection against body odor. Its luxurious fragrance will leave you feeling confident and refreshed. A must-have for any woman's daily routine.",
+          "Indulge yourself in luxury with Polo Ralph Lauren Red Extreme Deodorant Stick. This premium product is designed for men, providing long-lasting protection against sweat and odor. With its bold and sophisticated scent, this deodorant stick will keep you feeling confident and smelling fresh all day. Elevate your grooming routine with Polo Ralph Lauren Red Extreme.",
     },
     {
       "id": "58",
-      "name": "Armaf Club De Nuit Pink Deodorant Body Spray For Women 200 ML",
-      "price": 349.0,
-      "offer_price": 299.0,
+      "name":
+          "Hamidi Deluxe Collection Khashab Al Aswad Roll On 24ml For Men & Women",
+      "price": 999.0,
+      "offer_price": 599.0,
       "image": "images/products/stick10.webp",
       "category": "DeodorantStick",
       "description":
-          "Experience all-day freshness with Armaf Club De Nuit Deodorant Body Spray. This 200 ML spray is specially designed for women, providing long-lasting protection against body odor. Its luxurious fragrance will leave you feeling confident and refreshed. A must-have for any woman's daily routine.",
+          "Experience the luxurious scent of the Hamidi Deluxe Collection Khashab Al Aswad Roll On. Suitable for both men and women, this 24ml roll-on combines natural ingredients for a rich and long-lasting aroma. Perfect for those who want to make a statement without taking themselves too seriously. (Get ready to turn some heads!)",
     },
   ];
 }

@@ -4,6 +4,7 @@ import 'package:project_entri/features/cart/firebase_cart_service.dart';
 import 'package:project_entri/features/cart/payment_screen.dart';
 import 'package:project_entri/theme/colors.dart';
 import 'package:project_entri/widgets/custom_app_bar.dart';
+import 'package:project_entri/widgets/menu_drawer.dart';
 
 class CartScreen extends StatefulWidget {
   const CartScreen({super.key});
@@ -18,7 +19,11 @@ class _CartScreenState extends State<CartScreen> {
     final user = FirebaseAuth.instance.currentUser;
 
     return Scaffold(
-      appBar: CustomAppBar(title: "My Cart"),
+      appBar: const PreferredSize(
+        preferredSize: Size.fromHeight(80),
+        child: CustomAppBar(),
+      ),
+      drawer: MenuDrawer(),
 
       body: user == null
           ? const Center(child: Text("Please login first"))

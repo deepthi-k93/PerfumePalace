@@ -3,22 +3,20 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:project_entri/all_items.dart';
-import 'package:project_entri/features/cart/cart_screen.dart';
 import 'package:project_entri/features/cart/firebase_cart_service.dart';
 import 'package:project_entri/features/product/product_detail_screen.dart';
 import 'package:project_entri/features/product/product_list_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:project_entri/features/user/profile_screen.dart';
-import 'package:project_entri/features/wishlist/wishlist.dart';
 import 'package:project_entri/features/wishlist/wishlist_service.dart';
 import 'package:project_entri/reuse_functions.dart';
 import 'package:project_entri/theme/colors.dart';
-import 'package:project_entri/theme/values.dart';
+import 'package:project_entri/widgets/custom_app_bar.dart';
+import 'package:project_entri/widgets/menu_drawer.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key, required this.loggedUser});
+  const HomeScreen({super.key});
 
-  final String loggedUser;
+  // final String loggedUser;
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -32,87 +30,11 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       "USER IN HOME: ${FirebaseAuth.instance.currentUser}",
     );
     return Scaffold(
-      appBar: AppBar(
-        foregroundColor: Colors.white,
-        backgroundColor: MyColours.bgColor,
-        centerTitle: true,
-        title: Text(Values().appName),
-
-        actions: [
-          IconButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => WishlistScreen()),
-              );
-            },
-            icon: const Icon(Icons.favorite_border),
-          ),
-
-          IconButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => CartScreen()),
-              );
-            },
-            icon: const Icon(Icons.shopping_cart_outlined),
-          ),
-
-          const SizedBox(width: 8),
-        ],
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(80),
+        child: CustomAppBar(),
       ),
-
-      // DRAWER
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            DrawerHeader(
-              decoration: BoxDecoration(color: MyColours.bgColor),
-              child: const Text(
-                "Menu",
-                style: TextStyle(color: Colors.white, fontSize: 20),
-              ),
-            ),
-
-            ListTile(
-              leading: const Icon(Icons.person),
-              title: const Text("Profile"),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (_) => ProfileScreen()),
-                );
-              },
-            ),
-
-            const Divider(),
-
-            const Padding(
-              padding: EdgeInsets.all(12),
-              child: Text(
-                "Categories",
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-            ),
-
-            ...AllItems().categories.map((cat) {
-              return ListTile(
-                title: Text(cat["name"]),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (_) => ProductListScreen(category: cat["name"]),
-                    ),
-                  );
-                },
-              );
-            }),
-          ],
-        ),
-      ),
+      drawer: MenuDrawer(),
 
       body: SingleChildScrollView(
         child: Padding(
