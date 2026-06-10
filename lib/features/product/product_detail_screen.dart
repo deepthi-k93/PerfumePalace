@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
+// ignore_for_file: use_build_context_synchronously
 
+import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:project_entri/features/cart/cart_screen.dart';
 import 'package:project_entri/features/cart/firebase_cart_service.dart';

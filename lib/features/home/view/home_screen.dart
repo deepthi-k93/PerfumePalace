@@ -1,4 +1,4 @@
-// ignore_for_file: strict_top_level_inference, non_constant_identifier_names, prefer_typing_uninitialized_variables
+// ignore_for_file: use_build_context_synchronously, strict_top_level_inference, non_constant_identifier_names, prefer_typing_uninitialized_variables
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -7,7 +7,7 @@ import 'package:project_entri/features/cart/firebase_cart_service.dart';
 import 'package:project_entri/features/product/product_detail_screen.dart';
 import 'package:project_entri/features/product/product_list_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:project_entri/features/wishlist/wishlist_service.dart';
+import 'package:project_entri/features/wishlist/firebase_wishlist_service.dart';
 import 'package:project_entri/reuse_functions.dart';
 import 'package:project_entri/theme/colors.dart';
 import 'package:project_entri/widgets/custom_app_bar.dart';
@@ -303,12 +303,12 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                         }
 
                         if (isFav) {
-                          await WishlistService.removeFromWishlist(
+                          await FirebaseWishlistService.removeFromWishlist(
                             user.uid,
                             product["id"],
                           );
                         } else {
-                          await WishlistService.addToWishlist(
+                          await FirebaseWishlistService.addToWishlist(
                             user.uid,
                             product,
                           );

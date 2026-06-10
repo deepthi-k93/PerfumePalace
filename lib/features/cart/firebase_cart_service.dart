@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:project_entri/reuse_functions.dart';
 
 class FirebaseCartService {
   static final FirebaseFirestore _db = FirebaseFirestore.instance;
@@ -60,7 +59,6 @@ class FirebaseCartService {
         .snapshots()
         .map((snapshot) {
           int totalCount = snapshot.docs.length;
-
           return totalCount;
         });
   }

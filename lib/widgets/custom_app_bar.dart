@@ -5,6 +5,7 @@ import 'package:project_entri/features/cart/cart_screen.dart';
 import 'package:project_entri/features/cart/empty_cart.dart';
 import 'package:project_entri/features/cart/firebase_cart_service.dart';
 import 'package:project_entri/features/user/profile/profile_screen.dart';
+import 'package:project_entri/features/wishlist/firebase_wishlist_service.dart';
 import 'package:project_entri/features/wishlist/wishlist.dart';
 import 'package:project_entri/theme/colors.dart';
 import 'package:project_entri/theme/values.dart';
@@ -15,6 +16,7 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     int cartProducts = 0;
+    int wishlistProducts = 0;
     final user = FirebaseAuth.instance.currentUser;
     return AppBar(
       backgroundColor: MyColours.bgColor,
@@ -89,8 +91,72 @@ class CustomAppBar extends StatelessWidget {
             ),
           ),
         ),
+        Badge(
+          position: BadgePosition.topEnd(top: 1, end: 1),
+          badgeAnimation: BadgeAnimation.slide(
+            animationDuration: Duration(milliseconds: 300),
+            toAnimate: true,
+          ),
+          badgeStyle: BadgeStyle(
+            badgeColor: MyColours.iconsColor,
+            padding: EdgeInsetsGeometry.all(5),
+          ),
+          badgeContent: StreamBuilder<int>(
+            stream: FirebaseWishlistService().getWishlistCount(user!.uid),
+            builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                wishlistProducts = snapshot.data!;
+                return Text(
+                  wishlistProducts.toString(),
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                );
+              } else {
+                return Text(
+                  "0",
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                );
+              }
+            },
+          ),
+          child: IconButton(
+            onPressed: () {
+              final user = FirebaseAuth.instance.currentUser;
 
-        IconButton(
+              if (user == null) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text("Please login first")),
+                );
+                return;
+              }
+
+              if (wishlistProducts > 0) {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const WishlistScreen()),
+                );
+              } else {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => EmptyCart()),
+                );
+              }
+            },
+            icon: Icon(
+              Icons.favorite_border,
+              // color: MyColours.iconsColor,
+            ),
+          ),
+        ),
+
+        /*   IconButton(
           onPressed: () {
             Navigator.push(
               context,
@@ -102,7 +168,7 @@ class CustomAppBar extends StatelessWidget {
             // color: MyColours.iconsColor
           ),
         ),
-
+*/
         IconButton(
           onPressed: () {
             Navigator.push(

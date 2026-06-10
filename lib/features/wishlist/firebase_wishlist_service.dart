@@ -1,11 +1,15 @@
+// ignore_for_file: avoid_print
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class WishlistService { 
+class FirebaseWishlistService {
   static final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
   /// ADD TO WISHLIST
   static Future<void> addToWishlist(
-      String userId, Map<String, dynamic> product) async {
+    String userId,
+    Map<String, dynamic> product,
+  ) async {
     try {
       await _firestore
           .collection("users")
@@ -13,9 +17,9 @@ class WishlistService {
           .collection("wishlist")
           .doc(product["id"]) //  ALWAYS use ID
           .set({
-        ...product,
-        "createdAt": FieldValue.serverTimestamp(), // optional
-      });
+            ...product,
+            "createdAt": FieldValue.serverTimestamp(), // optional
+          });
     } catch (e) {
       print("ADD WISHLIST ERROR: $e");
     }
@@ -23,7 +27,9 @@ class WishlistService {
 
   /// REMOVE FROM WISHLIST
   static Future<void> removeFromWishlist(
-      String userId, String productId) async {
+    String userId,
+    String productId,
+  ) async {
     try {
       await _firestore
           .collection("users")
@@ -61,5 +67,19 @@ class WishlistService {
       print("CHECK WISHLIST ERROR: $e");
       return false;
     }
+  }
+
+  //get wishlist count
+  Stream<int> getWishlistCount(String userId) {
+    return _firestore
+        .collection("users")
+        .doc(userId)
+        .collection('wishlist')
+        .orderBy("createdAt", descending: true)
+        .snapshots()
+        .map((snapshot) {
+          int totalCount = snapshot.docs.length;
+          return totalCount;
+        });
   }
 }
