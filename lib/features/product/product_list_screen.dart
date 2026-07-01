@@ -34,91 +34,6 @@ class ProductListScreen extends StatelessWidget {
         foregroundColor: Colors.white,
         actionsPadding: EdgeInsets.symmetric(horizontal: 16.0),
         actions: [
-          //FAVORITES BUTTON
-          Badge(
-            position: BadgePosition.topEnd(top: 1, end: 1),
-            badgeAnimation: BadgeAnimation.slide(
-              animationDuration: Duration(milliseconds: 300),
-              toAnimate: true,
-            ),
-            badgeStyle: BadgeStyle(
-              badgeColor: MyColours.iconsColor,
-              padding: EdgeInsetsGeometry.all(5),
-            ),
-            badgeContent: StreamBuilder<int>(
-              stream: FirebaseWishlistService().getWishlistCount(user!.uid),
-              builder: (context, snapshot) {
-                if (snapshot.hasData) {
-                  wishlistProducts = snapshot.data!;
-                  return Text(
-                    wishlistProducts.toString(),
-                    style: TextStyle(
-                      fontSize: 12,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  );
-                } else {
-                  return Text(
-                    "0",
-                    style: TextStyle(
-                      fontSize: 12,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  );
-                }
-              },
-            ),
-            child: IconButton(
-              onPressed: () {
-                final user = FirebaseAuth.instance.currentUser;
-
-                if (user == null) {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text("Please login first")),
-                  );
-                  return;
-                }
-
-                if (wishlistProducts > 0) {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (_) => const WishlistScreen()),
-                  );
-                } else {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => EmptyCart()),
-                  );
-                }
-              },
-              icon: Icon(
-                Icons.favorite_border,
-                // color: MyColours.iconsColor,
-              ),
-            ),
-          ),
-
-          /*  IconButton(
-            onPressed: () {
-              final user = FirebaseAuth.instance.currentUser;
-
-              if (user == null) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text("Please login first")),
-                );
-                return;
-              }
-
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (_) => const WishlistScreen()),
-              );
-            },
-            icon: const Icon(Icons.favorite_border),
-          ),
-*/
           // CART BUTTON
           Badge(
             position: BadgePosition.topEnd(top: 1, end: 1),
@@ -177,6 +92,71 @@ class ProductListScreen extends StatelessWidget {
           ),
 
           const SizedBox(width: 10),
+          //FAVORITES BUTTON
+          Badge(
+            position: BadgePosition.topEnd(top: 1, end: 1),
+            badgeAnimation: BadgeAnimation.slide(
+              animationDuration: Duration(milliseconds: 300),
+              toAnimate: true,
+            ),
+            badgeStyle: BadgeStyle(
+              badgeColor: MyColours.iconsColor,
+              padding: EdgeInsetsGeometry.all(5),
+            ),
+            badgeContent: StreamBuilder<int>(
+              stream: FirebaseWishlistService().getWishlistCount(user.uid),
+              builder: (context, snapshot) {
+                if (snapshot.hasData) {
+                  wishlistProducts = snapshot.data!;
+                  return Text(
+                    wishlistProducts.toString(),
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  );
+                } else {
+                  return Text(
+                    "0",
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  );
+                }
+              },
+            ),
+            child: IconButton(
+              onPressed: () {
+                final user = FirebaseAuth.instance.currentUser;
+
+                if (user == null) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text("Please login first")),
+                  );
+                  return;
+                }
+
+                if (wishlistProducts > 0) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const WishlistScreen()),
+                  );
+                } else {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => EmptyCart()),
+                  );
+                }
+              },
+              icon: Icon(
+                Icons.favorite_border,
+                // color: MyColours.iconsColor,
+              ),
+            ),
+          ),
         ],
       ),
 
@@ -219,6 +199,7 @@ class ProductListScreen extends StatelessWidget {
                             children: [
                               SizedBox(
                                 width: double.infinity,
+                                height: 140,
                                 child: Image.asset(
                                   product["image"],
                                   fit: BoxFit.cover,
@@ -269,10 +250,10 @@ class ProductListScreen extends StatelessWidget {
                                       ],
                                     ),
 
-                                    // const SizedBox(height: 6),
+                                    const SizedBox(height: 6),
                                     SizedBox(
                                       width: double.infinity,
-                                      height: 17,
+                                      height: 20,
                                       child: ElevatedButton(
                                         style: ElevatedButton.styleFrom(
                                           backgroundColor: MyColours.bgColor,
@@ -298,7 +279,7 @@ class ProductListScreen extends StatelessWidget {
                                       ),
                                     ),
 
-                                    const SizedBox(height: 6),
+                                    // const SizedBox(height: 6),
                                   ],
                                 ),
                               ),
@@ -316,7 +297,7 @@ class ProductListScreen extends StatelessWidget {
                               ? FirebaseFirestore.instance
                                     .collection("users")
                                     .doc(user.uid)
-                                    .collection("favorites")
+                                    .collection("wishlist")
                                     .doc(product["id"])
                                     .snapshots()
                               : const Stream.empty(),

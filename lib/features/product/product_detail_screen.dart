@@ -1,12 +1,15 @@
 // ignore_for_file: use_build_context_synchronously
 
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Badge;
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:project_entri/features/cart/cart_screen.dart';
+import 'package:project_entri/features/cart/empty_cart.dart';
 import 'package:project_entri/features/cart/firebase_cart_service.dart';
 import 'package:project_entri/features/cart/payment_screen.dart';
+import 'package:project_entri/features/wishlist/firebase_wishlist_service.dart';
 import 'package:project_entri/features/wishlist/wishlist.dart';
 import 'package:project_entri/theme/colors.dart';
+import 'package:badges/badges.dart';
 
 class ProductDetailScreen extends StatelessWidget {
   final Map<String, dynamic> product;
@@ -23,6 +26,10 @@ class ProductDetailScreen extends StatelessWidget {
     double offerPrice = product["offer_price"] is String
         ? double.tryParse(product["offer_price"].replaceAll("₹", "")) ?? 0
         : (product["offer_price"] as num).toDouble();
+    int cartProducts = 0;
+    int wishlistProducts = 0;
+
+    final user = FirebaseAuth.instance.currentUser;
 
     return Scaffold(
       appBar: AppBar(
@@ -31,7 +38,131 @@ class ProductDetailScreen extends StatelessWidget {
         centerTitle: true,
         title: Text(product["name"]),
         actions: [
-          IconButton(
+          Badge(
+            position: BadgePosition.topEnd(top: 1, end: 1),
+            badgeAnimation: BadgeAnimation.slide(
+              animationDuration: Duration(milliseconds: 300),
+              toAnimate: true,
+            ),
+            badgeStyle: BadgeStyle(
+              badgeColor: MyColours.iconsColor,
+              padding: EdgeInsetsGeometry.all(5),
+            ),
+            badgeContent: StreamBuilder<int>(
+              stream: FirebaseCartService().getCartCount(user!.uid),
+              builder: (context, snapshot) {
+                if (snapshot.hasData) {
+                  cartProducts = snapshot.data!;
+                  return Text(
+                    cartProducts.toString(),
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  );
+                } else {
+                  return Text(
+                    "0",
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  );
+                }
+              },
+            ),
+            child: IconButton(
+              onPressed: () {
+                if (cartProducts > 0) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CartScreen()),
+                  );
+                } else {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => EmptyCart()),
+                  );
+                }
+              },
+              icon: Icon(
+                Icons.shopping_bag_outlined,
+                // color: MyColours.iconsColor,
+              ),
+            ),
+          ),
+
+          const SizedBox(width: 10),
+
+          //FAVORITES BUTTON
+          Badge(
+            position: BadgePosition.topEnd(top: 1, end: 1),
+            badgeAnimation: BadgeAnimation.slide(
+              animationDuration: Duration(milliseconds: 300),
+              toAnimate: true,
+            ),
+            badgeStyle: BadgeStyle(
+              badgeColor: MyColours.iconsColor,
+              padding: EdgeInsetsGeometry.all(5),
+            ),
+            badgeContent: StreamBuilder<int>(
+              stream: FirebaseWishlistService().getWishlistCount(user.uid),
+              builder: (context, snapshot) {
+                if (snapshot.hasData) {
+                  wishlistProducts = snapshot.data!;
+                  return Text(
+                    wishlistProducts.toString(),
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  );
+                } else {
+                  return Text(
+                    "0",
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  );
+                }
+              },
+            ),
+            child: IconButton(
+              onPressed: () {
+                final user = FirebaseAuth.instance.currentUser;
+
+                if (user == null) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text("Please login first")),
+                  );
+                  return;
+                }
+
+                if (wishlistProducts > 0) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const WishlistScreen()),
+                  );
+                } else {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => EmptyCart()),
+                  );
+                }
+              },
+              icon: Icon(
+                Icons.favorite_border,
+                // color: MyColours.iconsColor,
+              ),
+            ),
+          ),
+
+        /*  IconButton(
             onPressed: () {
               Navigator.push(
                 context,
@@ -52,7 +183,7 @@ class ProductDetailScreen extends StatelessWidget {
             icon: const Icon(Icons.shopping_cart_outlined),
           ),
 
-          const SizedBox(width: 10),
+          const SizedBox(width: 10),*/
         ],
       ),
 

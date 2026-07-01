@@ -1,9 +1,9 @@
-
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:project_entri/features/cart/firebase_cart_service.dart';
+import 'package:project_entri/features/cart/success_page.dart';
 import 'package:project_entri/features/orders/firebase_order_service.dart';
 import 'package:project_entri/reuse_functions.dart';
 import 'package:project_entri/theme/colors.dart';
@@ -53,15 +53,19 @@ class _PaymentScreenState extends State<PaymentScreen> {
 
       if (!mounted) return;
 
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(const SnackBar(content: Text("Order Placed via Cash on Delivery 🎉")));
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text("Order Placed via Cash on Delivery 🎉")),
+      );
 
       // Stay on screen + reset state
       setState(() {
         loading = false;
         selectedMethod = "COD";
       });
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => SuccessPage()),
+      );
     } catch (e) {
       ScaffoldMessenger.of(
         context,
@@ -111,6 +115,11 @@ class _PaymentScreenState extends State<PaymentScreen> {
     setState(() {
       loading = false;
     });
+
+    Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => SuccessPage()),
+      );
   }
 
   // PAYMENT FAILED

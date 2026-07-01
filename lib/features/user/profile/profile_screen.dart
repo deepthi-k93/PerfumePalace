@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:project_entri/auth_service.dart';
 import 'package:project_entri/features/orders/firebase_order_service.dart';
+import 'package:project_entri/reuse_functions.dart';
 import 'package:project_entri/theme/colors.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -185,7 +186,8 @@ class ProfileScreen extends StatelessWidget {
                   itemBuilder: (context, index) {
                     final order = orders[index];
                     final items = order["items"];
-
+                    // ReuseFunctions.logPrint().i("orders: ${items["price"]}");
+                    ReuseFunctions.logPrint().i("orders: $items");
                     return Card(
                       margin: const EdgeInsets.all(10),
                       shape: RoundedRectangleBorder(
@@ -201,7 +203,7 @@ class ProfileScreen extends StatelessWidget {
                           return ListTile(
                             leading: Image.asset(item['image'], width: 40),
                             title: Text(item['name']),
-                            trailing: Text("₹${item['offer_price']}"),
+                            trailing: Text("₹${item['price']}"),
                           );
                         }).toList(),
                       ),

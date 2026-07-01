@@ -102,7 +102,7 @@ class CustomAppBar extends StatelessWidget {
             padding: EdgeInsetsGeometry.all(5),
           ),
           badgeContent: StreamBuilder<int>(
-            stream: FirebaseWishlistService().getWishlistCount(user!.uid),
+            stream: FirebaseWishlistService().getWishlistCount(user.uid),
             builder: (context, snapshot) {
               if (snapshot.hasData) {
                 wishlistProducts = snapshot.data!;
@@ -137,17 +137,10 @@ class CustomAppBar extends StatelessWidget {
                 return;
               }
 
-              if (wishlistProducts > 0) {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (_) => const WishlistScreen()),
-                );
-              } else {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => EmptyCart()),
-                );
-              }
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const WishlistScreen()),
+              );
             },
             icon: Icon(
               Icons.favorite_border,
