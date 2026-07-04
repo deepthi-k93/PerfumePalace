@@ -1,11 +1,11 @@
 import 'dart:async';
 
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:project_entri/features/home/view/home_screen.dart';
 import 'package:project_entri/features/user/login/view/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:project_entri/reuse_functions.dart';
-import 'package:project_entri/theme/values.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -15,11 +15,17 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  String appName = Values().appName;
-
+  String appName = ""; //Values().appName;
+  String version = ""; //Values().appName;
   @override
   void initState() {
     super.initState();
+    PackageInfo.fromPlatform().then((PackageInfo packageInfo) {
+      setState(() {
+        appName = packageInfo.appName;
+        version = packageInfo.version;
+      });
+    });
   }
 
   @override
@@ -31,10 +37,7 @@ class _SplashScreenState extends State<SplashScreen> {
       Timer(const Duration(seconds: 5), () {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(
-            builder: (context) =>
-                HomeScreen(),
-          ),
+          MaterialPageRoute(builder: (context) => HomeScreen()),
         );
       });
     } else {
@@ -51,12 +54,17 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: Colors.white, // white background
       body: Padding(
         padding: EdgeInsets.all(20),
-        child: Center(
-          child: Image.asset(
-            "images/logo.webp",
-            fit: BoxFit.fill,
-            width: double.infinity,
-          ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              "images/logo.webp",
+              fit: BoxFit.fill,
+              width: double.infinity,
+            ),
+            SizedBox(height: 20),
+            Text(version, style: TextStyle(fontSize: 16, color: Colors.black)),
+          ],
         ),
       ),
     );
